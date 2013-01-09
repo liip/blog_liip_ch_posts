@@ -28,11 +28,11 @@ still happens frequently. The next step is going to beta, at which point we will
 and where we will always provide upgrade documentation and if possible also an update script. In my humble opinion
 there is really no reason not to move all parts in the stack to beta more or less right now. Here is what I believe
 to be part of our stack:
-- [PHPCR](https://github.com/phpcr/phpcr) and [PHPCR Utils](https://github.com/phpcr/phpcr-utils) (*)
-- [Jackalope](https://github.com/jackalope/jackalope) (with [Jackrabbit](https://github.com/jackalope/jackalope-jackrabbit) and [Doctrine DBAL](https://github.com/jackalope/jackalope-doctrine-dbal)
-- [PHPCR ODM](https://github.com/doctrine/phpcr-odm)
-- [Routing](https://github.com/symfony-cmf/Routing), [RoutingExtraBundle](https://github.com/symfony-cmf/RoutingExtraBundle), [CoreBundle](https://github.com/symfony-cmf/CoreBundle), [ContentBundle](https://github.com/symfony-cmf/ContentBundle), [MenuBundle](https://github.com/symfony-cmf/MenuBundle), [SimpleCmsBundle](https://github.com/symfony-cmf/SimpleCmsBundle), [CreateBundle](https://github.com/symfony-cmf/CreateBundle), [BockBundle](https://github.com/symfony-cmf/BockBundle), [TreeBundle](https://github.com/symfony-cmf/TreeBundle), [TreeBrowserBundle](https://github.com/symfony-cmf/TreeBrowserBundle), [SonataDoctrinePhpcrAdminBundle](https://github.com/sonata-project/SonataDoctrinePhpcrAdminBundle), [DoctrinePHPCRBundle](https://github.com/doctrine/DoctrinePHPCRBundle) (**)
-- create.js, VIE, hallo
+* [PHPCR](https://github.com/phpcr/phpcr) and [PHPCR Utils](https://github.com/phpcr/phpcr-utils) (*)
+* [Jackalope](https://github.com/jackalope/jackalope) (with [Jackrabbit](https://github.com/jackalope/jackalope-jackrabbit) and [Doctrine DBAL](https://github.com/jackalope/jackalope-doctrine-dbal)
+* [PHPCR ODM](https://github.com/doctrine/phpcr-odm)
+* [Routing](https://github.com/symfony-cmf/Routing), [RoutingExtraBundle](https://github.com/symfony-cmf/RoutingExtraBundle), [CoreBundle](https://github.com/symfony-cmf/CoreBundle), [ContentBundle](https://github.com/symfony-cmf/ContentBundle), [MenuBundle](https://github.com/symfony-cmf/MenuBundle), [SimpleCmsBundle](https://github.com/symfony-cmf/SimpleCmsBundle), [CreateBundle](https://github.com/symfony-cmf/CreateBundle), [BockBundle](https://github.com/symfony-cmf/BockBundle), [TreeBundle](https://github.com/symfony-cmf/TreeBundle), [TreeBrowserBundle](https://github.com/symfony-cmf/TreeBrowserBundle), [SonataDoctrinePhpcrAdminBundle](https://github.com/sonata-project/SonataDoctrinePhpcrAdminBundle), [DoctrinePHPCRBundle](https://github.com/doctrine/DoctrinePHPCRBundle) (**)
+* [create.js](http://createjs.org), [VIE](http://viejs.org), [hallo](http://hallojs.org)
 
 I added a (*) to PHPCR, since there will in fact not be a stable release before JSR-333 is ratified, which I expect
 to happen sometime in 2013. However I do not expect anything else but minor tweaks if at all.
