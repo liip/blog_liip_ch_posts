@@ -17,10 +17,9 @@ to match the recent changes done in the JCR 2.1 (ie. JSR-333) spec. Many of the 
 from the PHPCR team, so this update will bring some important improvements. Adrien has brought the integration
 of [create.js](http://createjs.org) for content authoring to a [usable state](https://github.com/symfony-cmf/symfony-cmf-website/pull/9).
 I have been busy with some smaller improvements to [Jackalope Doctrine DBAL](https://github.com/jackalope/jackalope-doctrine-dbal)
-and some bigger changes to [PHPCR ODM](https://github.com/doctrine/phpcr-odm).
-
-At the same time we are quite excited that both [ezPublish5](https://github.com/ezsystems/ezp-next/blob/master/composer.json#L28)
-and [Drupal 8](http://drupal.org/node/1874500) will leverage the CMF Routing component to handle the needs for dynamic routing.
+and some bigger changes to [PHPCR ODM](https://github.com/doctrine/phpcr-odm). At the same time we are quite excited that both
+[ezPublish5](https://github.com/ezsystems/ezp-next/blob/master/composer.json#L28) and
+[Drupal 8](http://drupal.org/node/1874500) will leverage the CMF Routing component to handle the needs for dynamic routing.
 
 So things are progressing and for people willing to live a bit on the edge, all components are quite ready
 for production use even today. However we are still stuck in alpha state, which means we try not to break BC unnecessary but it
@@ -46,23 +45,23 @@ move past the beta label so that we can provide a reliable development platform.
 I think we need to do work on the following:
 
 1) Jackalope (MUST)
-- Merge the JSR-333 updates mentioned above.
-- Fix the left-over issues from the initial work to provide [XML import/export](https://github.com/jackalope/jackalope/pull/105)
-- Wrap up the [open PRs](https://github.com/jackalope/jackalope-doctrine-dbal/pulls) in the Doctrine DBAL implementation
+* Merge the JSR-333 updates mentioned above.
+* Fix the left-over issues from the initial work to provide [XML import/export](https://github.com/jackalope/jackalope/pull/105)
+* Wrap up the [open PRs](https://github.com/jackalope/jackalope-doctrine-dbal/pulls) in the Doctrine DBAL implementation
 
 2) Create.js (MUST)
-- Fix the [open issues in our integration](https://github.com/symfony-cmf/symfony-cmf-website/pull/9)
-- Create an example for inline block creation/ordering in the sandbox and standard edition
-- Improve support for non visible metadata (like tags, dates, publish states etc.)
+* Fix the [open issues in our integration](https://github.com/symfony-cmf/symfony-cmf-website/pull/9)
+* Create an example for inline block creation/ordering in the sandbox and standard edition
+* Improve support for non visible metadata (like tags, dates, publish states etc.)
 
 3) Documentation (MUST)
-- Continue to make improvements to the documentation
+* Continue to make improvements to the documentation
 
 4) KnpMenu (SHOULD)
-- Ensure that version 2.0 is finished and supports lazy loading the menu data to [solve performance issues with larger menu structures](https://github.com/symfony-cmf/MenuBundle/issues/19)
+* Ensure that version 2.0 is finished and supports lazy loading the menu data to [solve performance issues with larger menu structures](https://github.com/symfony-cmf/MenuBundle/issues/19)
 
 5) Sonata (SHOULD)
-- Add more standard blocks (f.e. slide show)
-- Add support for reordering child nodes in the tree UI
-- Add support for SonataCacheBundle to allow for caching of block content
-- Add support for SonataMediaBundle to allow for more flexible media asset management
+* Add more standard blocks (f.e. slide show)
+* Add support for reordering child nodes in the tree UI
+* Add support for SonataCacheBundle to allow for caching of block content
+* Add support for SonataMediaBundle to allow for more flexible media asset management
