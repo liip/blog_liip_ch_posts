@@ -26,7 +26,20 @@ So things are progressing and for people willing to live a bit on the edge all c
 for production use even today. However we are still stuck in alpha state, which means we try not to break BC but we
 still break BC frequently. The next step is going to beta at which point we will become more hesitant to break BC
 and where we will always provide upgrade documentation and if possible also an update script. In my humble opinion
-there is really no reason not to move all parts in the stack to beta more or less right now.
+there is really no reason not to move all parts in the stack to beta more or less right now. Here is what I believe
+to be part of our stack:
+- [PHPCR]9https://github.com/phpcr/phpcr) and [PHPCR Utils](https://github.com/phpcr/phpcr-utils) (*)
+- [Jackalope](https://github.com/jackalope/jackalope) (with [Jackrabbit](https://github.com/jackalope/jackalope-jackrabbit) and [Doctrine DBAL](https://github.com/jackalope/jackalope-doctrine-dbal)
+- [PHPCR ODM](https://github.com/doctrine/phpcr-odm)
+- [Routing](https://github.com/symfony-cmf/Routing), [RoutingExtraBundle](https://github.com/symfony-cmf/RoutingExtraBundle), [CoreBundle](https://github.com/symfony-cmf/CoreBundle), [ContentBundle](https://github.com/symfony-cmf/ContentBundle), [MenuBundle](https://github.com/symfony-cmf/MenuBundle), [SimpleCmsBundle](https://github.com/symfony-cmf/SimpleCmsBundle), [CreateBundle](https://github.com/symfony-cmf/CreateBundle), [BockBundle](https://github.com/symfony-cmf/BockBundle), [TreeBundle](https://github.com/symfony-cmf/TreeBundle), [TreeBrowserBundle](https://github.com/symfony-cmf/TreeBrowserBundle), [SonataDoctrinePhpcrAdminBundle](https://github.com/sonata-project/SonataDoctrinePhpcrAdminBundle), [DoctrinePHPCRBundle](https://github.com/doctrine/DoctrinePHPCRBundle) (**)
+- create.js, VIE, hallo
+
+I added a (*) to PHPCR, since there will in fact not be a stable release before JSR-333 is ratified, which I expect
+to happen sometime in 2013. However I do not expect anything else but minor tweaks if at all.
+
+As for the (**) here I mean that we also need stable releases of dependencies, like f.e. [FOSRestBundle](https://github.com/friendsofsymfony/FOSRestBundle)
+and [createphp](https://github.com/flack/createphp). Also note that I specifically omitted [SearchBundle](https://github.com/symfony-cmf/SearchBundle) as
+I am not sure if it will be ready in time.
 
 As our goal is to make a stable release around the time of the 2.2/2.3 core releases we however have to quickly
 however also move past the beta label so that we can provide a reliable development platform. In order to get there
@@ -35,11 +48,11 @@ I think we need to do work on the following:
 1) Jackalope (MUST)
 - Merge the JSR-333 updates mentioned above.
 - Fix the left-over issues from the initial work to provide [XML import/export](https://github.com/jackalope/jackalope/pull/105)
-- Wrap up the [open PRs ](https://github.com/jackalope/jackalope-doctrine-dbal/pulls) in the Doctrine DBAL implementation
+- Wrap up the [open PRs](https://github.com/jackalope/jackalope-doctrine-dbal/pulls) in the Doctrine DBAL implementation
 
 2) Create.js (MUST)
-- Fix the [open issues](https://github.com/symfony-cmf/symfony-cmf-website/pull/9)
-- Create an example for Block administration in the sandbox and standard edition
+- Fix the [open issues in our integration](https://github.com/symfony-cmf/symfony-cmf-website/pull/9)
+- Create an example for inline block creation/ordering in the sandbox and standard edition
 - Improve support for non visible metadata (like tags, dates, publish states etc.)
 
 3) Documentation (MUST)
@@ -50,5 +63,6 @@ I think we need to do work on the following:
 
 5) Sonata (SHOULD)
 - Add more standard blocks (f.e. slide show)
+- Add support for reordering child nodes in the tree UI
 - Add support for SonataCacheBundle to allow for caching of block content
 - Add support for SonataMediaBundle to allow for more flexible media asset management
