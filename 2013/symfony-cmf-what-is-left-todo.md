@@ -13,8 +13,8 @@ did a lot of very important additions and corrections to the [documentation](htt
 
 At the same time Liipers have also worked on several topics. [David](https://github.com/dbu) is putting the final
 touches on updating [PHPCR](https://github.com/phpcr/phpcr/pull/52) and [Jackalope](https://github.com/jackalope/jackalope/pull/136)
-to match the recent changes done in the JCR 2.1 (ie. JSR-333) spec. Many of the changes there were a result of feedback
-from the PHPCR team, so this update will bring some important improvements. Adrien has brought the integration
+to match the recent changes done in the JCR 2.1 (ie. [JSR-333](http://jcp.org/en/jsr/detail?id=333)) spec. Many of the changes
+there were a result of feedback from the PHPCR team, so this update will bring some important improvements. Adrien has brought the integration
 of [create.js](http://createjs.org) for content authoring to a [usable state](https://github.com/symfony-cmf/symfony-cmf-website/pull/9).
 I have been busy with some smaller improvements to [Jackalope Doctrine DBAL](https://github.com/jackalope/jackalope-doctrine-dbal)
 and some bigger changes to [PHPCR ODM](https://github.com/doctrine/phpcr-odm). At the same time we are quite excited that both
