@@ -35,11 +35,11 @@ to be part of our stack:
  * [create.js](http://createjs.org), [VIE](http://viejs.org), [hallo](http://hallojs.org)
 
 I added a (*) to PHPCR, since there will in fact not be a stable release before JSR-333 is ratified, which I expect
-to happen sometime in 2013. However I do not expect anything else but minor tweaks if at all.
+to happen sometime in 2013. However I do not expect anything else but minor tweaks if any.
 
 As for the (**) here I mean that we also need stable releases of dependencies, like f.e. [FOSRestBundle](https://github.com/friendsofsymfony/FOSRestBundle)
 and [createphp](https://github.com/flack/createphp). Also note that I specifically omitted [SearchBundle](https://github.com/symfony-cmf/SearchBundle) as
-I am not sure if it will be ready in time.
+I am not sure if it will be ready in time and its not really core functionality per se.
 
 As our goal is to make a stable release around the time of the 2.2/2.3 core releases we however have to quickly
 move past the beta label so that we can provide a reliable development platform. In order to get there
@@ -71,3 +71,5 @@ I think we need to do work on the following:
  * Add support for reordering child nodes in the tree UI
  * Add support for SonataCacheBundle to allow for caching of block content
  * Add support for SonataMediaBundle to allow for more flexible media asset management
+
+Anything I missed?
