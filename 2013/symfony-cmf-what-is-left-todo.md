@@ -27,6 +27,7 @@ still happens frequently. The next step is going to beta, at which point we will
 and where we will always provide upgrade documentation and if possible also an update script. In my humble opinion
 there is really no reason not to move all parts in the stack to beta more or less right now. Here is what I believe
 to be part of our stack:
+
  * [PHPCR](https://github.com/phpcr/phpcr) and [PHPCR Utils](https://github.com/phpcr/phpcr-utils) (*)
  * [Jackalope](https://github.com/jackalope/jackalope) (with [Jackrabbit](https://github.com/jackalope/jackalope-jackrabbit) and [Doctrine DBAL](https://github.com/jackalope/jackalope-doctrine-dbal)
  * [PHPCR ODM](https://github.com/doctrine/phpcr-odm)
@@ -45,22 +46,27 @@ move past the beta label so that we can provide a reliable development platform.
 I think we need to do work on the following:
 
 1) Jackalope (MUST)
+
  * Merge the JSR-333 updates mentioned above.
  * Fix the left-over issues from the initial work to provide [XML import/export](https://github.com/jackalope/jackalope/pull/105)
  * Wrap up the [open PRs](https://github.com/jackalope/jackalope-doctrine-dbal/pulls) in the Doctrine DBAL implementation
 
 2) Create.js (MUST)
+
  * Fix the [open issues in our integration](https://github.com/symfony-cmf/symfony-cmf-website/pull/9)
  * Create an example for inline block creation/ordering in the sandbox and standard edition
  * Improve support for non visible metadata (like tags, dates, publish states etc.)
 
 3) Documentation (MUST)
+
  * Continue to make improvements to the documentation
 
 4) KnpMenu (SHOULD)
+
  * Ensure that version 2.0 is finished and supports lazy loading the menu data to [solve performance issues with larger menu structures](https://github.com/symfony-cmf/MenuBundle/issues/19)
 
 5) Sonata (SHOULD)
+
  * Add more standard blocks (f.e. slide show)
  * Add support for reordering child nodes in the tree UI
  * Add support for SonataCacheBundle to allow for caching of block content
