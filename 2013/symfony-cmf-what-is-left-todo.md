@@ -29,7 +29,7 @@ there is really no reason not to move all parts in the stack to beta more or les
 to be part of our stack:
 
  * [PHPCR](https://github.com/phpcr/phpcr) and [PHPCR Utils](https://github.com/phpcr/phpcr-utils) (*)
- * [Jackalope](https://github.com/jackalope/jackalope) (with [Jackrabbit](https://github.com/jackalope/jackalope-jackrabbit) and [Doctrine DBAL](https://github.com/jackalope/jackalope-doctrine-dbal)
+ * [Jackalope](https://github.com/jackalope/jackalope) (with [Jackrabbit](https://github.com/jackalope/jackalope-jackrabbit) and [Doctrine DBAL](https://github.com/jackalope/jackalope-doctrine-dbal))
  * [PHPCR ODM](https://github.com/doctrine/phpcr-odm)
  * [Routing](https://github.com/symfony-cmf/Routing), [RoutingExtraBundle](https://github.com/symfony-cmf/RoutingExtraBundle), [CoreBundle](https://github.com/symfony-cmf/CoreBundle), [ContentBundle](https://github.com/symfony-cmf/ContentBundle), [MenuBundle](https://github.com/symfony-cmf/MenuBundle), [SimpleCmsBundle](https://github.com/symfony-cmf/SimpleCmsBundle), [CreateBundle](https://github.com/symfony-cmf/CreateBundle), [BockBundle](https://github.com/symfony-cmf/BockBundle), [TreeBundle](https://github.com/symfony-cmf/TreeBundle), [TreeBrowserBundle](https://github.com/symfony-cmf/TreeBrowserBundle), [SonataDoctrinePhpcrAdminBundle](https://github.com/sonata-project/SonataDoctrinePhpcrAdminBundle), [DoctrinePHPCRBundle](https://github.com/doctrine/DoctrinePHPCRBundle) (**)
  * [create.js](http://createjs.org), [VIE](http://viejs.org), [hallo](http://hallojs.org)
