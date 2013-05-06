@@ -35,3 +35,7 @@ I held this session by basically doing a walk through of a client application we
 ### NoSQL is not the answer
 
 I had given [this](http://www.slideshare.net/lsmith77/no-sql-isnottheanswer) as a lightning talk at GotoCon in Zurich and figured it would be a useful topic for this event as well. I even managed to get Kris to come out of the sun for this session! He added some more insights. The tl;dr; of this session is: Stop using the term NoSQL as well as that there is lots of room for innovation on top of relation theory which the vendors are finally addressing thanks to all the hype around MongoDB, CouchDB and friends.
+
+## Take away
+
+The big take away is that unconferences are awesome and from what I hear our yearly Liip internal techday will heavily draw from this concept. The second take away is that Symfony2 is the dominante framework in continental Europe. Third BDD deserves more attention at Liip.
