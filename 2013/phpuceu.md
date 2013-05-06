@@ -4,7 +4,7 @@ So this weekend I visited my hometown Berlin for the [PHPUCEU](http://www.phpuce
 
 ### PHPCR
 
-I proposed a talk on PHPCR which was selected for the first session. I essentially gave the talk I had given multiple times before. But its still exciting to share the content repository vision for PHP. Looks like there might even be PHPCR support in the future for [Jimdo](http://dev.jimdo.com/2013/05/06/phpuceu/)?
+I proposed a talk on PHPCR which was selected for the first session. I essentially gave the talk I had given multiple times before. But its still exciting to share the content repository vision for PHP. Looks like there might even be PHPCR support in the future for [Jimdo](http://dev.jimdo.com/2013/05/06/phpuceu/) and [Magento](http://www.mage-hackathon.de/projectIdea/index/)?
 
 ### Clean puppet
 
