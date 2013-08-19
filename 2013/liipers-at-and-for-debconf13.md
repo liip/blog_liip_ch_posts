@@ -1,6 +1,6 @@
 Over the two last weeks, both Kevin and myself have had the great pleasure to help organizing the 14th [Debian](http://debian.org/) Conference, [DebConf13](http://debconf13.ch/ "DebConf13.ch"), which was held in Switzerland, at [Le Camp](http://www.lecamp.ch/), in Vaumarcus, on the shore of Lake Neuchâtel.
 
-<a href="https://gallery.debconf.org/main.php?g3_itemId=60940"><img alt="Le Camp building containing the bar (upper floor), Front desk (lower floor on the right) and the second talk room" src="https://gallery.debconf.org/main.php?g2_view=core.DownloadItem&g2_itemId=60942&g2_serialNumber=2" style="width: 50%;" title="One of the buildings used for talks at DebConf13" /><span style="font-size: 0.5em;">Picture by Jan Dittberner</span></a>
+<a href="https://gallery.debconf.org/main.php?g2_itemId=60931"><img alt="Le Camp building containing the bar (upper floor), Front desk (lower floor on the right) and the second talk room" src="https://gallery.debconf.org/main.php?g2_view=core.DownloadItem&amp;g2_itemId=60942&amp;g2_serialNumber=2" style="width: 50%;" title="One of the buildings used for talks at DebConf13" /><span style="font-size: 0.5em;">Picture by Jan Dittberner</span></a>
 
 ### Organisation
 Organizing a full week of talks for more than 300 attendees from all over the world has been quite a challenge for the so-called _DebConf-Team_:
@@ -8,7 +8,7 @@ Organizing a full week of talks for more than 300 attendees from all over the wo
 - convincing that both the expensive Switzerland and the unusual conference venue were suitable for hosting the annual conference of the project;
 - finding enough sponsors in all contribution categories to make the conference financially viable;
 - negotiating and coordinating all big and small logistical concerns (as well as food, accomodation and camping) with the [Le Camp](http://www.lecamp.ch/) staff;
-- scheduling more than 120 events on the six available days in four rooms;
+- scheduling more than 120 events on the six possible days in four rooms, across eleven tracks;
 - setting up two parallel wireless networks for more than 500 unique devices;
 - setting up and operating the video-streaming infrastructure for the two main talk rooms live for the benefit of remote attendees;
 - coordinating the accomodation of more than 200 attendees on-site;
