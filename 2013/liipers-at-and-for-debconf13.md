@@ -28,6 +28,6 @@ In a more personal level, I have had the pleasure and opportunity to present one
 This wouldn't have been possible without the support of Liip in two contexts:
 
 - Liip has agreed to become a [DebConf13 Bronze sponsor](http://debconf13.debconf.org/sponsors.xhtml#cat3-sponsors). All contributions helped making DebConf13 a possibility, from an idea to the two weeks of awesome reality that it's been.
-- Liip allowed both Kevin and myself to attend the conference on company time through using our [Further Education](http://www.liip.ch/en/who/philosophy#LEARNING] budgets, made of both time and money for attendance fee, etc.
+- Liip allowed both Kevin and myself to attend the conference on company time through using our [Further Education](http://www.liip.ch/en/who/philosophy#LEARNING) budgets, made of both time and money (in this case, for attendance fees).
 
-Thanks to Liip!
+Many thanks to Liip!
