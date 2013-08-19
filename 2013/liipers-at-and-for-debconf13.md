@@ -21,7 +21,7 @@ Organizing a full week of talks for more than 300 attendees from all over the wo
 While the [social](https://gallery.debconf.org/main.php?g2_itemId=59936), [outside](http://photos.cihar.com/g/2013-debconf/IMGP8487.html) and [leisure](http://joeyh.name/blog/entry/swiss_cheese/) activities have certainly been the most enjoyable part of this DebConf, noone forgot the main [goals of DebConf](http://debconf.org/goals.shtml): face-to-face interactions, talks and work.
 
 As mentionned above, [DebConf13](http://debconf13.ch/) permitted more than 120 events to happen, split between formal stand-up talks, BoF ([Birds of Feather](https://en.wikipedia.org/wiki/Birds_of_a_feather_(computing)), structured work-sessions) and Debian team meetings.
-If any of the [topics](http://penta.debconf.org/dc13_schedule/events.en.html) raises some interest to you, you can (or will in few days) find all the [DebConf13 videos](http://meetings-archive.debian.net/pub/debian-meetings/2013/debconf13/) online, thanks to the amazing work of the DebConf video team.
+If any of the [topics](http://penta.debconf.org/dc13_schedule/events.en.html) raises some interest to you, you can find all the [DebConf13 videos](http://meetings-archive.debian.net/pub/debian-meetings/2013/debconf13/) online, thanks to the amazing work of the DebConf video team.
 
 In a more personal level, I have had the pleasure and opportunity to present one talk titled [From Smaky to Colobot, a history of software in Switzerland](http://penta.debconf.org/dc13_schedule/events/1011.en.html), in the [DebConf 20th birthday track](http://debconf13.debconf.org/birthday.xhtml).
 ### Liip
