@@ -68,7 +68,7 @@ Your services simply use a logger as usual (injected with dependency injection) 
 
 In the standard edition of Symfony 2.4 this feature is now included by default with [PR #557](https://github.com/symfony/symfony-standard/pull/557). You can even customize
 the behavior as in the following example. With the `verbosity_levels` option you can adapt the above mentioned mapping between verbosity and log level. In this case it will
-also show notices in normal verbosity mode (instead of warnings only). Additionally, it will only use messages logged with the custom "*my_channel*" channel and it changes the
+also show notices in normal verbosity mode (instead of warnings only). Additionally, it will only use messages logged with the custom *my_channel* channel and it changes the
 display style via a custom formatter. See also the [documentation](http://symfony.com/doc/current/cookbook/logging/monolog.html) for more information.
 
 ```yaml
