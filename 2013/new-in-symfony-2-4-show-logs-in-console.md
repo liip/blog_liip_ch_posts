@@ -29,8 +29,8 @@ that is passed when your command gets executed like in the following example:
 
 But there are two problems:
 
-1. It's cumbersome to print information depending on the verbosity settings (-v, -vv, -vvv) because you need to wrap the calls in conditions.
-2. If the service you call also wants to give feedback you would need to pass on the `$output` as with `$myService->process($data, $output)`. But this is really bad
+- It's cumbersome to print information depending on the verbosity settings (-v, -vv, -vvv) because you need to wrap the calls in conditions.
+- If the service you call also wants to give feedback you would need to pass on the `$output` as with `$myService->process($data, $output)`. But this is really bad
 code in terms of separation of concerns and coupling. What if this service has a dependency on another service? Working with the `OutputInterface` and passing around the instance is not the way to go.
 
 To solve these things I thought it would be much easier to rely on the logger which is highly related. So I added integration between [Symfonys Console Component](http://symfony.com/doc/current/components/console/index.html) 
