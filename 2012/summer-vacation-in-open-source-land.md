@@ -67,7 +67,7 @@ Vagrant at Liip
 
 So my first day back, I spend one day at the office catching up with different discussions.
 What I loved most about getting back is that Liip has now adopted [Vagrant](http://vagrantup.com) for project setup.
-So getting the new project installed consisted of installing [VirtalBox](http://virtualbox.com), calling "git clone" followed by "cd ..; vagrant up".
+So getting the new project installed consisted of installing [VirtualBox](http://virtualbox.com), calling "git clone" followed by "cd ..; vagrant up".
 How sweet is that? All members of the team have the same setup, no fuss.
 It looks like Liip will bring [all this goodness](http://twitter.com/chregu/status/243768581773479936) to the general Symfony2 world, with [an open PR](https://github.com/symfony/symfony-standard/pull/407) adding a Vagrant template setup to the official Symfony2 Standard Edition.
 
@@ -103,5 +103,5 @@ I quickly added the Symfony2 CMF components and bundles to it.
 Its not a CMS project per se, but it will give us a quick way to let the customer edit content, handle translations.
 Can't wait to add inline editing as we should be able to wrap up a big refactoring of the create.js integration with the work done at yesterdays hack day in Fribourg.
 Here is a [quick summary](https://groups.google.com/d/msg/symfony-cmf-devs/XwaDeFam79I/uOfiyGzGpVMJ) of the results.
-This hack day, but more importantly the growing number of contributors, is prooving that we are now well on track with the Symfony2 CMF.
+This hack day, but more importantly the growing number of contributors, is proving that we are now well on track with the Symfony2 CMF.
 And now that it's already far along enough so that it's easier to integrate than trying to hack up something with the ORM means that we at Liip can finally start reaping the benefits of our investments!
