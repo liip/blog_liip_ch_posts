@@ -34,7 +34,7 @@ But there are two problems:
 code in terms of separation of concerns and coupling. What if this service has a dependency on another service? Working with the `OutputInterface` and passing around the instance is not the way to go.
 
 To solve these things I thought it would be much easier to rely on the logger which is highly related. So I added integration between [Symfonys Console Component](http://symfony.com/doc/current/components/console/index.html) 
-and Symfonys logging library [Monolog](https://github.com/Seldaek/monolog) in [PR #8167](https://github.com/symfony/symfony/pull/8167). 
+and Symfonys logging library [Monolog](https://github.com/Seldaek/monolog) in [PR #8167](https://github.com/symfony/symfony/pull/8167).
 It features a new handler for Monolog (`ConsoleHandler`) that listens to the [console events](http://symfony.com/blog/new-in-symfony-2-3-events-in-the-console-component) 
 and upon activation will write log messages to the console output depending on the current log level and the console verbosity. By default this mapping between log level and verbosity is as follows:
 
@@ -56,7 +56,7 @@ Monolog handler. All it needs is an additional handler of type `console` in your
                 type:   console
 
 With this in place, all messages that are logged while running a command get nicely displayed on the console. With _nicely_ I mean that the messages
-are timestamped, colored depending on the log level and error logs are even written to the error ouput (`php://stderr`).
+are timestamped, colored depending on the log level and error logs are even written to the error output (`php://stderr`).
 Now you don't need to conditionally handle the verbosity settings anymore and you can consistently use the logger instead of the OutputInterface in your commands and the services.
 Your services simply use a logger as usual (injected with dependency injection) and are not coupled to the console.
 
