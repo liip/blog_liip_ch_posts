@@ -14,7 +14,7 @@ I attended this session by Soenke, Jakon und Hans-Christian mainly because I am 
 
 Kore and Gaylord gave this session. Gaylord was representing the more business level perspective while Kore the more technical one. The exciting part about BDD is that BDD can really bring those two sides closer together. However the most important take away for me from this session is that [Behat](http://behat.org) can now generate stubs for Context definitions, which will drastically reduce the effort for expanding the DSL for non developers. Gaylord mentioned that he thinks that using BDD seriously increases development time. Yet the benefits of additional testing and always uptodate documentation outweigh these costs. We have played with BDD at Liip several times, but its time we get more serious about it.
 
-### Evening programm
+### Evening program
 
 I missed the 4th session of the day because I was chatting with people outside. After the last session ended we got together and each session was briefly summarized. We headed to a local beer garden which unfortunately was a bit overwhelmed with us and so the service was quite non existant. However we still stayed several hours. Talking about technology and organization challenges.
 
@@ -38,4 +38,4 @@ I had given [this](http://www.slideshare.net/lsmith77/no-sql-isnottheanswer) as 
 
 ## Take away
 
-The big take away is that unconferences are awesome and from what I hear our yearly Liip internal techday will heavily draw from this concept. The second take away is that Symfony2 is the dominante framework in continental Europe. Third BDD deserves more attention at Liip.
+The big take away is that unconferences are awesome and from what I hear our yearly Liip internal techday will heavily draw from this concept. The second take away is that Symfony2 is the dominant framework in continental Europe. Third BDD deserves more attention at Liip.
