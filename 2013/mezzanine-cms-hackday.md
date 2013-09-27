@@ -83,7 +83,7 @@ The project would be called MUL and would at least fulfill the following require
 * student can subscribe to activities
 * teacher can see how many participants registered to their activities
 
-#### Playing (aka let's code!)
+### Playing (aka let's code!)
 
 Creating custom content types in Mezzanine was really easy and we had activities and their related sessions in no time. The only thing is that we first wrongly assume we should extend the "Page" model before understanding that we didn't want Activities to be mixed together (ie. hierarchically organized) with the others pages, so we finally extended the "Displayable" behaviour.  
 As Mezzanine "is just Django" creating relations between content types (activity/sessions) was a breeze and we could, on a single admin page, edit our activity and add multiple sessions.
