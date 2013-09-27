@@ -34,6 +34,8 @@ So we took our usual postits and came up with a list of CMS needs. We then voted
 
 Of course this list is completely subjective but at least it gave us a pretty good start to evaluate Mezzanine.
 
+![listing-requirement-mezzanine-cms]("/files/mezzanine-hackday.jpg" />
+
 ### The reality
 
 We then had a look at Mezzanine doc and played a bit with the demo to see what it could offer out of the box. The documentation is quite good and the UI sufficiently intuitive that after a little while we could make a first estimation at what is possible from our list with very minimum coding. Here is the list updated:
