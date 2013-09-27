@@ -38,7 +38,8 @@ Of course this list is completely subjective but at least it gave us a pretty go
 
 ### The reality
 
-We then had a look at Mezzanine doc and played a bit with the demo to see what it could offer out of the box. The documentation is quite good and the UI sufficiently intuitive that after a little while we could make a first estimation at what is possible from our list with very minimum coding. Here is the list updated:
+We then had a look at Mezzanine doc and played a bit with the demo to see what it could offer out of the box. The documentation is quite good and the UI sufficiently intuitive that after a little while we could make a first estimation at what is possible from our list with very minimum coding. Here is the list updated:  
+(/ = ok, x = not ok)
 
 * (/) editable static page
 * (/) media management (UI not fantastic)
@@ -87,7 +88,7 @@ The project would be called MUL and would at least fullfil the following require
 Creating custom content types in Mezzanine was really easy and we had activities and their related sessions in no time. The only thing is that we first wrongly assume we should extend the "Page" model before understanding that we didn't want Activities to be mixed together (ie. hierarchically organized) with the others pages, so we finally extended the "Displayable" behaviour.  
 As Mezzanine "is just Django" creating relations between content types (activity/sessions) was a breeze and we could, on a single admin page, edit our activity and add multiple sessions.
 
-As a developer point of view it's a real pleasure to be able to define content types as simple Django model, especially compared to let's say Drupal content type (...) It makes it also way easier to collaborate on a project and share.
+As a developer point of view it's a real pleasure to be able to define content types in code, as simple Django model, especially compared to let's say Drupal content type (...) It makes it also way easier to collaborate on a project and share (git/db migration).
 On top of that you get basic front-end editing: you just add a pre-defined template tag around your field and once logged in when browsing your site you see an "edit" button next to each rendered field! This is nowhere as powerful as what you can do with [createjs](http://www.createjs.com/#!/CreateJS) for ex. but is a nice feature nevertheless.
 
 As the included category possibilities were not enough for what we wanted (no hierarchy) we installed [django-categories](https://github.com/callowayproject/django-categories) (remember "it's just Django!") and voila! we could organize our activities in a nice hierarchy.
@@ -96,7 +97,9 @@ Mezzanine, through a fork of [django-filebrowser](https://github.com/sehmaschine
 
 With the very limited time we still got we added a Teacher profile (one to one relationship to Django User) and role, so that we could easily add some permission checks. Again fairly straightforward.
 
+On the front-end side, Mezzanine uses Bootstrap by default, which gives a good starting point to layout your content. The basic theme is easily extendable/overridable by simply creating new/extending existing templates. (For the Symfony2 lovers around, Twig was much inspired by Django templating system, so you'll feel at home).
+
 I personally had so much fun that i added student registration / subscription to activities on my spare time!
 
-Mezzanine seems like a very nice way to tackle the CMS issue: provide devs a very thin layer containing necessary behaviours (ie. Sluggable, Displayable, Ownable..) as well as image management, and leaving you handle the rest through usual Django. I only wish they would put some effort on i18n so that more is offered out of the box...
+Mezzanine seems like a very nice way to tackle the CMS issue: provide devs a very thin layer containing necessary behaviours (ie. Sluggable, Displayable, Ownable..) as well as image management, and leaving you handle the rest through usual Django code. I only wish they would put some effort on i18n so that more is offered out of the box...
 Thumbs up!
