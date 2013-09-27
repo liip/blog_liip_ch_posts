@@ -34,7 +34,7 @@ So we took our usual postits and came up with a list of CMS needs. We then voted
 
 Of course this list is completely subjective but at least it gave us a pretty good start to evaluate Mezzanine.
 
-![listing-requirement-mezzanine-cms]("/files/images/blog/mezzanine-cms-hackday-50.jpg")
+![listing-requirement-mezzanine-cms](/files/images/blog/mezzanine-cms-hackday-50.jpg)
 
 ### The reality
 
@@ -89,8 +89,8 @@ Creating custom content types in Mezzanine was really easy and we had activities
 As Mezzanine "is just Django" creating relations between content types (activity/sessions) was a breeze and we could, on a single admin page, edit our activity and add multiple sessions.
 
 As a developer point of view it's a real pleasure to be able to define content types in code, as simple Django model, especially compared to let's say Drupal content type (...) It makes it also way easier to collaborate on a project and share (git/db migration).
-On top of that you get basic front-end editing: you just add a pre-defined template tag around your field and once logged in when browsing your site you see an "edit" button next to each rendered field! This is nowhere as powerful as what you can do with [createjs](http://www.createjs.com/#!/CreateJS) for ex. but is a nice feature nevertheless.
-![frontend-edition-mezzanine-cms]("/files/images/blog/mezzanine_frontend_edition_crop.jpg")
+On top of that you get basic front-end editing: you just add a pre-defined template tag around your field and once logged in when browsing your site you see an "edit" button next to each rendered field! This is nowhere as powerful as what you can do with [createjs](http://www.createjs.com/#!/CreateJS) for ex. but is a nice feature nevertheless.  
+![frontend-edition-mezzanine-cms](/files/images/blog/mezzanine_frontend_edition_crop.jpg)
 
 As the included category possibilities were not enough for what we wanted (no hierarchy) we installed [django-categories](https://github.com/callowayproject/django-categories) (remember "it's just Django!") and voila! we could organize our activities in a nice tree.
 
