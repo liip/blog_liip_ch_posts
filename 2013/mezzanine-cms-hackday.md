@@ -34,7 +34,7 @@ So we took our usual postits and came up with a list of CMS needs. We then voted
 
 Of course this list is completely subjective but at least it gave us a pretty good start to evaluate Mezzanine.
 
-![listing-requirement-mezzanine-cms]("/files/mezzanine-hackday.jpg" />
+![listing-requirement-mezzanine-cms]("/files/images/blog/mezzanine-cms-hackday-50.jpg" />
 
 ### The reality
 
