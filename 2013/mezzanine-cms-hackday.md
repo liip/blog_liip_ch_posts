@@ -1,4 +1,4 @@
-## Goals
+### Goals
 As we are a few [Django](https://www.djangoproject.com/) lovers in Lausanne we (Sylvain, Noé and I) spent a hackday exploring [Mezzanine](http://mezzanine.jupo.org/), a very light CMS layer on top of this nice Python framework.
 
 The goals of the day were:
@@ -90,6 +90,7 @@ As Mezzanine "is just Django" creating relations between content types (activity
 
 As a developer point of view it's a real pleasure to be able to define content types in code, as simple Django model, especially compared to let's say Drupal content type (...) It makes it also way easier to collaborate on a project and share (git/db migration).
 On top of that you get basic front-end editing: you just add a pre-defined template tag around your field and once logged in when browsing your site you see an "edit" button next to each rendered field! This is nowhere as powerful as what you can do with [createjs](http://www.createjs.com/#!/CreateJS) for ex. but is a nice feature nevertheless.
+![frontend-edition-mezzanine-cms]("/files/images/blog/mezzanine_frontend_edition_crop.jpg")
 
 As the included category possibilities were not enough for what we wanted (no hierarchy) we installed [django-categories](https://github.com/callowayproject/django-categories) (remember "it's just Django!") and voila! we could organize our activities in a nice tree.
 
