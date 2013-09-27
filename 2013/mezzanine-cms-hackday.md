@@ -1,5 +1,3 @@
-# Mezzanine hackday
-
 ## Goals
 As we are a few [Django](https://www.djangoproject.com/) lovers in Lausanne we (Sylvain, Noé and I) spent a hackday exploring [Mezzanine](http://mezzanine.jupo.org/), a very light CMS layer on top of this nice Python framework.
 
