@@ -73,9 +73,9 @@ The project would be called MUL and would at least fulfill the following require
 * 1 language
 * 3 roles (teacher/student/admin)
 * custom content types:
- * activity (title, body, max nb of participants, teacher, sesssions)
- * session (date)
- * news (title, slideshow of images, body)
+* activity (title, body, max nb of participants, teacher, sesssions)
+* session (date)
+* news (title, slideshow of images, body)
 * categories (activity kinds)
 * user profile
 * user registration
