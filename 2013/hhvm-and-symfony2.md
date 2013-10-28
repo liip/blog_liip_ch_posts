@@ -28,7 +28,7 @@ Concurrency | PHP 5.3|PHP 5.5|HHVM|HHVM vs 5.3|HHVM vs 5.5|5.5 vs 5.3
 20||247|441||179 %|
 50||258|380||147 %|
 
-![image](img/small-req.png)
+![image](files/images/blog/hhvm/small-req.png)
 
 
 ## Requests per second, middle response
@@ -47,7 +47,7 @@ Concurrency | PHP 5.3|PHP 5.5|HHVM|HHVM vs 5.3|HHVM vs 5.5|5.5 vs 5.3
 20||53|105||197 %|
 50||56|108||193 %|
 
-![image](img/middle-req.png)
+![image](files/images/blog/hhvm/middle-req.png)
 
 
 ## Requests per second, large response
@@ -66,7 +66,7 @@ Concurrency|PHP 5.3|PHP 5.5|HHVM|HHVM vs 5.3|HHVM vs 5.5|5.5 vs 5.3
 20||24|49||208 %|
 50||24|50||212 %|
 
-![image](img/large-req.png)
+![image](files/images/blog/hhvm/large-req.png)
 
 
 
@@ -86,7 +86,7 @@ Concurrency | PHP 5.3|PHP 5.5|HHVM|HHVM vs 5.3|HHVM vs 5.5|5.5 vs 5.3
 20||78|43||55 %|
 50||191|105||55 %|
 
-![image](img/small-median.png)
+![image](files/images/blog/hhvm/small-median.png)
 
 
 
@@ -106,7 +106,7 @@ Concurrency | PHP 5.3|PHP 5.5|HHVM|HHVM vs 5.3|HHVM vs 5.5|5.5 vs 5.3
 20||366|185||51 %|
 50||872|451||52 %|
 
-![image](img/middle-median.png)
+![image](files/images/blog/hhvm/middle-median.png)
 
 
 ## Median response time in ms, large response
@@ -125,5 +125,5 @@ Concurrency | PHP 5.3|PHP 5.5|HHVM|HHVM vs 5.3|HHVM vs 5.5|5.5 vs 5.3
 20| |843|394| |47 %| | 
 50| |2069|968| |47 %| |
 
-![image](img/large-median.png)
+![image](files/images/blog/hhvm/large-median.png)
 
