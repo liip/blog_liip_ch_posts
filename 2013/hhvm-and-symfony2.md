@@ -127,3 +127,5 @@ Concurrency | PHP 5.3|PHP 5.5|HHVM|HHVM vs 5.3|HHVM vs 5.5|5.5 vs 5.3
 
 ![image](/files/images/blog/hhvm/large-median.png)
 
+I will have a look at memory consumption in a follow up post.
+
