@@ -1,16 +1,16 @@
-With the recent announcement of Facebook that their HHVM is now more and more compatible with most of the popular framework, I was intrigued to finally try it out. We’re currently building a Symfony2 based application, which has pretty high performance requirements (but we can mostly achieve them with varnish), so I went and did some performance tests on that real-life app.
+With the recent announcement of Facebook that their HHVM is now more and [more compatible with most of the popular framework](http://www.hhvm.com/blog/1301/hhvm-2-2-0), I was intrigued to finally try it out. We’re currently building a Symfony2 based application, which has pretty high performance requirements (but we can mostly achieve them with varnish), so I went and did some performance tests on that real-life app.
 
-The application basically gets data from an elasticsearch server and then transforms them to JSON. Nothing too fancy from the output perspective, but we use many features of Symfony2 and what was clear from the beginning is that the more data it gets from elasticsearch the slower the requests get. Meaning that we loose a lot of time in the serialization part (we use JMSSerializer for that).
+The application basically gets data from an ElasticSearch server and then transforms them to JSON. Nothing too fancy from the output perspective, but we use many features of Symfony2 and what was clear from the beginning is that the more data it gets from ElasticSearch the slower the requests get. Meaning that we loose a lot of time in the serialization part (we use [JMSSerializer](http://jmsyst.com/libs/serializer) for that).
 
 In short, the numbers were amazing. I also compared PHP 5.3 with APC against 5.5 with opcache, that alone gave some pretty decent improvements.
 
-The setup I did the tests on was a QuadCore Intel i7-4770 CPU @ 3.40GHz server over at hetzner with SSD disks and more than enough RAM. The actual application ran in a virtual box container with 4 CPUs and 2 GB of RAM, and I just used Apache Bench for the tests. I used the [HHVM vagrant VM ](https://github.com/javer/hhvm-vagrant-vm) with Ubuntu 12.04, but installed the pre-built HHVM from their repo in the end.
+The setup I did the tests on was a QuadCore Intel i7-4770 CPU @ 3.40GHz server over at Hetzner with SSD disks and more than enough RAM. The actual application ran in a VirtualBox container with 4 CPUs and 2 GB of RAM. I used Apache Bench for the tests with the [HHVM vagrant VM](https://github.com/javer/hhvm-vagrant-vm) running Ubuntu 12.04, but I installed the pre-built HHVM from their repo in the end.
 
-I made 3 different requests with different amount of data the script had to get from elasticsearch. One was approx. 7kb in response, the other 80kb and the last 220kb.
+I made 3 different requests with different amount of data the script had to get from ElasticSearch. One was approx. 7kb in response, the other 80kb and the last 220kb.
 
-As you can see below, the longer the PHP request in general, the more you gain from HHVM, up to and sometimes more than 300% against PHP 5.3, and about 200% against PHP 5.5, but only switching from PHP 5.3 to PHP 5.5 can save you up to twice the time, as well. It's worth upgrading and I find both numbers pretty amazing.
+As you can see below, in general the longer the PHP request ran, the more we gained from HHVM, up to and sometimes more than 300% against PHP 5.3, and about 200% against PHP 5.5. Only switching from PHP 5.3 to PHP 5.5 can save you up to twice the time, as well. So it is very much worth upgrading to 5.5. I find both numbers pretty amazing.
 
-If you really need every millisecond performance, considering HHVM is worth some investigation. This numbers are promising. And I don't had to change one line of code in our application. We don't use it yet in production, so I can't say anything about stability. And things like New Relic are out of question with HHVM.
+If you really need every millisecond performance, considering HHVM is worth some investigation. These numbers are very promising. And I don't had to change one line of code in our application. As we don't use it yet in production, I can't say anything about stability. Obviously tools like New Relic are, at least for now, also out of the question with HHVM.
 
 ## Requests per second, small response
 
