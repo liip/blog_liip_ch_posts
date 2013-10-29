@@ -6,7 +6,9 @@ In short, the numbers were amazing. I also compared PHP 5.3 with APC against 5.5
 
 The setup I did the tests on was a QuadCore Intel i7-4770 CPU @ 3.40GHz server over at Hetzner with SSD disks and more than enough RAM. The actual application ran in a VirtualBox container with 4 CPUs and 2 GB of RAM. I used Apache Bench for the tests with the [HHVM vagrant VM](https://github.com/javer/hhvm-vagrant-vm) running Ubuntu 12.04, but I installed the pre-built HHVM from their repo in the end.
 
-I made 3 different requests with different amount of data the script had to get from ElasticSearch. One was approx. 7kb in response, the other 80kb and the last 220kb.
+I made 3 different requests with different amount of data the script had to get from ElasticSearch. One was approx. 7kb in response, the other 80kb and the last 220kb. I didn't it with different concurrency settings (1-50) and ran Apache Bench with 500 requests per run. The figures below are averages over those 500 requests.
+
+I didn't do performance measurements for PHP 5.3 with more than 6 concurrent requests, because I added 10,20,50 later and didn't repeat for 5.3, but the trend is clear nevertheless.
 
 As you can see below, in general the longer the PHP request ran, the more we gained from HHVM, up to and sometimes more than 300% against PHP 5.3, and about 200% against PHP 5.5. Only switching from PHP 5.3 to PHP 5.5 can save you up to twice the time, as well. So it is very much worth upgrading to 5.5. I find both numbers pretty amazing.
 
