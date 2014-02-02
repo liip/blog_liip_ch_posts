@@ -32,13 +32,13 @@ if (req.url ~ "^/things.json?.*search=" ) {
 
 We can then later extend that URL matcher to include more requests.
 
-The example of the auther of the vmods uses `req.http.X-Request-Backend` for reporting which backend was used to statsd. Since with the fallback director defined above that's always _hhvm_api_fallback_, no matter which backend was used and we wanted to know when the fallback uses php_api instead of hhvm_api, we added the following to `vcl_fetch`:
+The example of the author of the vmods uses `req.http.X-Request-Backend` for reporting which backend was used with statsd. Since with the fallback director defined above that is always _hhvm_api_fallback_, no matter which backend was used and we wanted to know when the fallback uses php_api instead of hhvm_api, we added the following to `vcl_fetch`:
 
 ````
 set req.http.X-Stats-Backend = beresp.backend.name;
 ````
 
-Now the actually used backend is reported later (at least for misses, for hits it's still hhvm_api_fallback, but that's ok, since it didn't use any backend at all. I'm sure this could be changed as well somehow with some header trickery in the vcl)
+Now the backend that is actually used is reported later (at least for misses, for hits it's still hhvm_api_fallback, but that is ok, since it didn't use any backend at all, wthough I'm sure this could be changed as well somehow with some header trickery in the vcl).
 
 The librato backend seems also to interpret some stats differently than for example the default graphite backend in statsd. Therefore we used the the following lines in `vcl_deliver` for sending the values to statsd:
 
@@ -54,13 +54,14 @@ req.http.X-Stats-Status;
 statsd.incr(   req.http.X-Stats-Key + ".count");
 statsd.timing( req.http.X-Stats-Key + ".time", timers.req_response_time() );
 ````
-(we basically added the .count and .time to the .key, librato got confuesd if you use the same key for counters and timers)
+
+We basically added `.count` and `.time` to the key as librato gets confuesd if you use the same key for counters and timers.
 
 With this data we can now plot graphs for each backend and each request type in librato. We immediatly see, if there are problems (for example too many non-200 responses or if one backend is slower than expected). We also can compare hits vs misses and collect the load of the servers with [collectd](http://collectd.org/).
 
 ## Logging slow requests
 
-Having an overview about how fast your setup is, is one thing, but being able to know exactly which requests were slow another one. For the PHP backend we have New Relic for that. It keeps track of slow requests with full call traces and eg. SQL queries and their performance. It's very useful, also for error reporting. For HHVM nothing similar exists yet (to our knowledge at least) and we didn't want to clutter the code with too many home-grown analysis calls. We decided that for now it's enough to just know which calls were slow, to be able to debug them, if it happens too often. And this is possible with varnish and the timers vmod. All we added for this in `vcl_deliver` was
+Having an overview about how fast your setup is, is one thing, but being able to know exactly which requests are slow is another one. For the PHP backend we have New Relic for that. It keeps track of slow requests with full call traces and eg. SQL queries and their performance. It's very useful, also for error reporting. For HHVM nothing similar exists yet (to our knowledge at least) and we didn't want to clutter the code with too many home-grown analysis calls. We decided that for now it's enough to just know which calls were slow, to be able to debug them, if it happens too often. And this is possible with varnish and the timers vmod. All we added for this in `vcl_deliver` was
 
 ````
 std.log("Backend:" + req.http.X-Stats-Backend);
@@ -77,10 +78,10 @@ Then we can use [varnishncsa](https://www.varnish-cache.org/docs/3.0/reference/v
 varnishncsa -F '%t "%r" %s %b "%{Referer}i" "%{User-agent}i" %{Varnish:hitmiss}x %{VCL_Log:Backend}x %D ' -m "VCL_Log:SlowQuery" -m "VCL_Log:Backend:hhvm_api$" -D -a -w logs/hhvm-api-slow.log
 ````
 
-This is the usual logfile format of web servers with some info added at the end. If it was a hit or a miss, which backend was used (logged via the std.log command in the vcl) and how long it took (the %D parameter). The we filter to just log requests which hav the SlowQuery tag and are for the hhvm_api backend (the others are recorded by New Relic, but we could of course do them here as well).
+This is the usual logfile format of web servers with some info added at the end. If it was a hit or a miss, which backend was used (logged via the std.log command in the vcl) and how long it took (the %D parameter). Then we can filter to just log requests which have the SlowQuery tag and are for the hhvm_api backend (the others are recorded by New Relic, but we could of course do them here as well).
 
 We then collect those with [logstash](http://logstash.net/) and send them to our [graylog2](http://graylog2.org/) server. From there we can do for example alerts or just analyse the requests and try to reproduce the slowness and make it faster.
 
-It's of course not as powerfull as the full toolset of New Relic (or similar), but at least we know now, which requests are slow. And we can also use that for other backends, should the need arise.
+It's of course not as powerful as the full toolset of New Relic (or similar), but at least we know now, which requests are slow. And we can also use that for other backends, should the need arise.
 
-If you have any input what could be improved or if you know about other tools to collect stats for HHVM (or other currently exotic systems), let us know. We're eager to hear about them. (Btw, Javascript, browser-based solutions are out of question here, since the API backend just sends JSON or XML, no possibility to inject JavaScript)
+If you have any input what could be improved or if you know about other tools to collect stats for HHVM (or other currently exotic systems), let us know. We're eager to hear about them. (Btw, Javascript, browser-based solutions are out of question here, since the API backend just sends JSON or XML, no possibility to inject JavaScript).
