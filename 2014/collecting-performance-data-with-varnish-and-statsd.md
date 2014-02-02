@@ -20,6 +20,7 @@ director hhvm_api_fallback fallback {
   { .backend = php_api; } // will only be used if hhvm_api is unhealthy.
 }
 ````
+
 This means, that varnish will normally use the hhvm_api backend, but if that is down, it will use the php_api backend. They run on the same server, but listen on different ports (of course, the whole thing is loadbalanced in front of it to have less single point of failures)
 
 As we only route some requests to the hhvm_api, we have the following in `vcl_recv`:
@@ -27,7 +28,7 @@ As we only route some requests to the hhvm_api, we have the following in `vcl_re
 ````
 if (req.url ~ "^/things.json?.*search=" ) {
         set req.backend = hhvm_api_fallback;
-}   
+}
 ````
 
 We can then later extend that URL matcher to include more requests.
@@ -70,6 +71,7 @@ if (timers.req_response_time() > 500) {
     std.log("SlowQuery:" + timers.req_response_time());
 }
 ````
+
 This always logs the used backend to the varnish logs. And if the response time was slower than 500ms, we also log it as SlowQuery to the logs.
 
 Then we can use [varnishncsa](https://www.varnish-cache.org/docs/3.0/reference/varnishncsa.html) to get readable logs and write them to a file. We use the following command for that:
