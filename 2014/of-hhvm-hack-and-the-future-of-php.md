@@ -14,4 +14,4 @@ Now since HHVM is open source of course the open source community can then fork 
 
 One of the big questions is why does Facebook even care about PHP mode if they are already moving their own code to Hack? To me one big reason for this could be that they actually want to use code produced in the community. I have not really seen any Facebook engineers sending code to PHP libraries but maybe right now they are not being so obvious about this. Despite the fact that last I checked (about a year ago) their Facebook PHP SDK had some hideous code, I am sure that this would be quite exciting and I have no doubts that they have some excellent PHP programmers that could boost adopted libraries quite significantly.
 
-So maybe in the end the best way to ensure that PHP mode in HHVM remains a goal for Facebook is to keep churing out how quality PHP code?
+So maybe in the end the best way to ensure that PHP mode in HHVM remains a goal for Facebook is to keep churing out high quality PHP code?
