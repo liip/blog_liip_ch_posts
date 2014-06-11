@@ -1,3 +1,4 @@
+<a href="https://www.flickr.com/photos/mikkelhoegh/14190237286" title="The Liip delegation at #phpeceu, signing off :) by Mikkel Høgh, on Flickr"><img src="https://farm3.staticflickr.com/2939/14190237286_9c2f63ff99.jpg" width="500" height="375" alt="The Liip delegation at #phpeceu, signing off :)"/></a> 
 
 <a href="https://www.flickr.com/photos/mikkelhoegh/14190237286" title="The Liip delegation at #phpeceu, signing off :) by Mikkel Høgh, on Flickr"><img src="https://farm3.staticflickr.com/2939/14190237286_9c2f63ff99.jpg" width="500" height="375" alt="The Liip delegation at #phpeceu, signing off :)"/></a> 
 
