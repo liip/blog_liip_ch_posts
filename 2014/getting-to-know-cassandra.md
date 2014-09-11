@@ -5,10 +5,9 @@ We did a small two person hackday to get to know Cassandra a bit. Lukas already 
 But first a very brief summary of what Cassandra is about:
 
 * Decentralization based on [Dynamo paper](http://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf)
-* Datastorage based on [Googles Bigtable paper](http://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf)
-* Some good presentations: 
- - http://www.slideshare.net/davegardnerisme/cassandras-sweet-spot-an-introduction-to-apache-cassandra 
- - https://skillsmatter.com/skillscasts/2489-cassandra
+* Data storage based on [Googles Bigtable paper](http://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf)
+* Some good presentations can be found [here](http://www.slideshare.net/davegardnerisme/cassandras-sweet-spot-an-introduction-to-apache-cassandra)
+  and [here](https://skillsmatter.com/skillscasts/2489-cassandra)
 
 ### Getting started
 
