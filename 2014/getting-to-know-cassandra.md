@@ -1,6 +1,3 @@
-Cassandra
-=========
-
 We did a small two person hackday to get to know Cassandra a bit. Lukas already learned a bit about Cassandra at [Berlin Buzzwords](http://blog.liip.ch/archive/2014/06/03/berlin-buzzwords-2014.html) but it was time to get some hands on experience to better understand how Cassandra would work out in a real client project. Our agenda for the day was however essentially: get it to run, see how to get it connected with PHP and then import some data and do some queries.
 
 ### Brief summary
