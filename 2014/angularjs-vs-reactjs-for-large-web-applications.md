@@ -66,4 +66,4 @@ AngularJS: Plugins for major ides (webstorm, eclipse, netbeans) are available. Y
 
 ReactJS: There are [tools](https://github.com/facebook/react/wiki/Complementary-Tools) and some editor support but IDE support is not there yet. Yeoman can be used to scaffold. 
 
-Thanks for reading. For a [summary see the top](#Summary; tldr).
+Thanks for reading. For a summary see the top.
