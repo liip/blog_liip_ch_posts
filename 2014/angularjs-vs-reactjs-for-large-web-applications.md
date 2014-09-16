@@ -1,5 +1,5 @@
 
-On the September 2014 hack day at liip we explored how AngularJS compares to ReactJS with Flux for large web applications. 
+On the September 2014 hack day at Liip we explored how AngularJS compares to ReactJS with Flux for large web applications. 
 
 There have been [other](http://www.quora.com/Pete-Hunt/Posts/Facebooks-React-vs-AngularJS-A-Closer-Look) [comparisons](https://medium.com/make-your-own-apps/facebooks-new-react-javascript-library-tutorial-rewritten-in-angularjs-e71bcedc36b) before but none focused on larger web apps.
 
@@ -7,11 +7,11 @@ There have been [other](http://www.quora.com/Pete-Hunt/Posts/Facebooks-React-vs-
 
 We like both frameworks a lot and since the choice for one library always depends on the applications requirements we won't give a recommendation. Given its age, AngularJS is way more mature than ReactJS which results in more available libraries and widespread use. It is to be seen how ReactJS can use its traction to catch up with AngularJS.
 
-A key difference between the philosophies of AngularJS and ReactJS is, that AngularJS relies on the browser DOM while ReactJS builds a virtual DOM which then can be converted to either a HTML string for server rending or to the browser DOM. This enables ['isomorphic javascript'](http://nerds.airbnb.com/isomorphic-javascript-future-web-apps/) (see also the [JS Zürich event](http://techup.ch/1731/jszurich-building-isomorphic-apps) hosted at liip Zürich) and tackles problems like first page load performance and search engine optimisation.
+A key difference between the philosophies of AngularJS and ReactJS is, that AngularJS relies on the browser DOM while ReactJS builds a virtual DOM which then can be converted to either a HTML string for server rending or to the browser DOM. This enables ['isomorphic javascript'](http://nerds.airbnb.com/isomorphic-javascript-future-web-apps/) (see also the [JS Zürich event](http://techup.ch/1731/jszurich-building-isomorphic-apps) hosted at Liip Zürich) and tackles problems like first page load performance and search engine optimisation.
 
 ## Getting started
 We started our hack day by collecting aspects we thought are relevant for larger web applications. 
-Since we were four people, we decided to have each liiper look at the framework they had the least prior knowledge. The liipers Matteo De Micheli and Mano Speck dived into ReactJS + Flux while Bastian Feder and myself took a look at AngularJS. We felt this maximised fun and learning of new technologies. Then each team got their hands dirty until we discussed our findings at the end of the day. 
+Since we were four people, we decided to have each Liiper look at the framework they had the least prior knowledge. The Liipers Matteo De Micheli and Mano Speck dived into ReactJS + Flux while Bastian Feder and myself took a look at AngularJS. We felt this maximised fun and learning of new technologies. Then each team got their hands dirty until we discussed our findings at the end of the day. 
 
 For AngularJS we first tried to scaffold an example app with [yeoman](http://yeoman.io). After some setup issues we got an app generated, but we realised that we wanted to see the use of AngularJS in existing apps. We found an example [angular-app](https://github.com/angular-app/angular-app) based on [ngbp](https://github.com/ngbp/ngbp) which argues to _contain a best-practice directory structure to ensure code reusability and maximum scalability_. To understand AngularJS, we scanned and modified the code while reading the great [AngularJS documentation](https://docs.angularjs.org/).
 
