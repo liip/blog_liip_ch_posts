@@ -202,15 +202,22 @@ achieve our goal with the following :
 There would be a lot of others thing to say or show, but I don't want to overwhelm you too much
 and there is already a lot of really interesting resources available on the web :
 
-* Larry Garfield has done presentations about the subject at various times, here is one of the most recent : https://www.youtube.com/watch?v=M3_xnTK6-pA
-* A bit more theory about functional programming : http://www.sitepoint.com/functional-programming-and-php/
-* A nice library with a lot of utility functions : https://github.com/lstrojny/functional-php
-* If you are a bit lost with all those new functional funky words, just watch https://www.youtube.com/watch?v=uwrCQmpZ8Ts
+* Larry Garfield has done presentations about the subject at various times, here is one of the most recent : [Functional PHP @ DrupalCon Austin 2014][10]
+* A bit more theory about functional programming : [Functional Programming and PHP][11]
+* A nice library with a lot of utility functions : [functional-php][12]
+* If you are a bit lost with all those new functional funky words, just watch [Functional Programmer Lingo Explained, with Pictures][13]
 
-There is even a book about this exact subject : "[Functional Programming in PHP](http://www.functionalphp.com/)".
+[10]: https://www.youtube.com/watch?v=M3_xnTK6-pA
+[11]: http://www.sitepoint.com/functional-programming-and-php/
+[12]: https://github.com/lstrojny/functional-php
+[13]: https://www.youtube.com/watch?v=uwrCQmpZ8Ts
+
+There is even a book about this exact subject : "[Functional Programming in PHP][14]".
 I didn't had the opportunity to read it as of now, but the recorded talk available is another take
 at explaining functional programming with a bit of PHP history at the beginning. I found it a bit
 too long, but still interesting.
+
+[14]: http://www.functionalphp.com/
 
 Memoization
 -----------
