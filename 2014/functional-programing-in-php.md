@@ -164,9 +164,7 @@ In most functional languages and library, you will also find functions that oper
 predicates (a test that return a boolean) and arrays. The most common examples are :
 
 * `first` / `last` which returns the first, respectively last, element of an array matching the predicate
-
 * `any` which returns true as soon as one element matches the predicate
-
 * `all` which returns true if all elements matches the predicate
 
 Those don't exists in PHP but you can find various implementations on the github gist I
