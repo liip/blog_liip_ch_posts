@@ -2,11 +2,18 @@ Functional programming techniques in PHP
 ========================================
 
 Functional programming has gained a lot of traction those 3 to 5 last years.
-First, there are some success stories around it : Twitter move to Scala, Whatsapp
-being written in Erlang. Then we have some new kick-ass languages like Rust.
-Finally, it seems the new hype is to create a functional language compiling
-to javascript : Elm, Purescript. On a more academic front, there is also
-research on new concepts like dependant typing, see Idris for example.
+First, there are some success stories around it : [Twitter move to Scala][1],
+[Whatsapp being written in Erlang][2]. Then we have some new kick-ass languages
+like [Rust][3]. Finally, it seems the new hype is to create a functional language
+compiling to javascript : [Elm][4], [Purescript][5]. On a more academic front, there
+is also research on new concepts like dependant typing, see [Idris][6] for example.
+
+[1]: http://www.slideshare.net/al3x/the-how-and-why-of-scala-at-twitter
+[2]: http://www.fastcolabs.com/3026758/inside-erlang-the-rare-programming-language-behind-whatsapps-success
+[3]: http://www.rust-lang.org/
+[4]: http://elm-lang.org/
+[5]: http://www.purescript.org/
+[6]: http://www.idris-lang.org/
 
 Those are all cool and shiny new toys, but we can benefit from some techniques
 without having to learn a new tool, just by applying some principles to our
@@ -23,8 +30,11 @@ solely on the input of the function. It also means you cannot have any mutable s
 once something was computed, it cannot be changed to something else.
 
 This can be cumbersome a time, so a distinction was made between pure functional
-languages (like Haskel or Ocaml) and other function languages, Scala for example,
+languages (like [Haskel][7] or [Ocaml][8]) and other function languages, Scala for example,
 where you can introduce mutable variables or even do plain old Java.
+
+[7]: https://www.haskell.org/
+[8]: https://ocaml.org/
 
 Another issue are input and outputs which are by definition mutable, the "problem"
 has been resolved in most functional languages by wrapping them into a Monad, the rest
@@ -94,7 +104,7 @@ the PHP world :
     $instance('First', 'Second'); // call the __invoke() method
 
 Knowing that, we can start playing around with basic functional concepts. For each example,
-the "common" way of doing things will be presented first followed by the functional.
+the "common" way of doing things will be presented first followed by the functional one.
 As it is often the case in functional programming, we will most of the time manipulate an
 array.
 
@@ -143,7 +153,9 @@ Filter an array :
     $result = array_filter($intArray, function($a) { return $a % 2 === 0); })
 
 
-A good example on how you can leverage the `array_filter` function is given in "[PHP The Right Way](http://www.phptherightway.com/pages/Functional-Programming.html)".
+A good example on how you can leverage the `array_filter` function is given in "[PHP The Right Way][9]".
+
+[9]: http://www.phptherightway.com/pages/Functional-Programming.html
 
 Some utility functions
 ----------------------
@@ -274,5 +286,4 @@ in conferences. I can't promise you that you will fall in love and don't come ba
 that you will learn a lot in the process!
 
 If I could only say one last thing, it would be : "Always strive to learn new things and don't stay in your comfort zone".
-
 
