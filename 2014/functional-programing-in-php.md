@@ -113,7 +113,7 @@ Applying a function to all elements :
 
 	// The imperative way :
 
-    foreach($k => $v in $stringArray) {
+    foreach($stringArray as $k => $v) {
         $stringArray[$k] = strtoupper($v);
     }
 
@@ -128,7 +128,7 @@ Applying a function to all elements :
 	// The imperative way :
 
     $result = 0;
-    foreach($v in $intArray) {
+    foreach($intArray as $v) {
         $result += $v;
     }
 
@@ -150,7 +150,7 @@ Filter an array :
 	// The imperative way :
 
     $result = array();
-    foreach($v in $intArray) {
+    foreach($intArray as $v) {
         if($v % 2 === 0) {
             $result[] = $v;
         }
