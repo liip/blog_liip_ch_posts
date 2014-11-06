@@ -103,31 +103,37 @@ the PHP world :
     $instance = new SomeClass();
     $instance('First', 'Second'); // call the __invoke() method
 
-Knowing that, we can start playing around with basic functional concepts. For each example,
-the "common" way of doing things will be presented first followed by the functional one.
+Knowing that, we can start playing around with basic functional concepts. **For each example,
+the "common" way of doing things will be presented first followed by the functional one**.
 As it is often the case in functional programming, we will most of the time manipulate an
 array.
 
 
 Applying a function to all elements :
 
+	// The imperative way :
+
     foreach($k => $v in $stringArray) {
         $stringArray[$k] = strtoupper($v);
     }
 
-    // -------------------------------------
+
+    // The functional way :
 
     $result = array_map($stringArray, 'strtoupper')
 
 
 "Reduce" an array, often called "fold" in functional languages :
 
+	// The imperative way :
+
     $result = 0;
     foreach($v in $intArray) {
         $result += $v;
     }
 
-    // -------------------------------------
+
+    // The functional way :
 
     $result = array_reduce($intArray, function($a, $b) { return $a + $b; }, 0)
 
@@ -141,6 +147,8 @@ It is also important to note that PHP offers an `array_sum` function for this pa
 
 Filter an array :
 
+	// The imperative way :
+
     $result = array();
     foreach($v in $intArray) {
         if($v % 2 === 0) {
@@ -148,7 +156,8 @@ Filter an array :
         }
     }
 
-    // -------------------------------------
+
+    // The functional way :
 
     $result = array_filter($intArray, function($a) { return $a % 2 === 0); })
 
