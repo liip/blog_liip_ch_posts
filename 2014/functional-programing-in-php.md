@@ -261,7 +261,7 @@ of any pure function :
             $args = func_get_args();
             $key = serialize($args);
             if(! array_key_exists($key, $cache)) {
-                $cache[$key] = call_user_func_array($func, $args);;
+                $cache[$key] = call_user_func_array($func, $args);
             }
             return $cache[$key];
         }
