@@ -120,7 +120,7 @@ Applying a function to all elements :
 
     // The functional way :
 
-    $result = array_map($stringArray, 'strtoupper')
+    $result = array_map('strtoupper', $stringArray);
 
 
 "Reduce" an array, often called "fold" in functional languages :
