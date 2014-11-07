@@ -159,7 +159,7 @@ Filter an array :
 
     // The functional way :
 
-    $result = array_filter($intArray, function($a) { return $a % 2 === 0); })
+    $result = array_filter($intArray, function($a) { return ($a % 2 === 0); })
 
 
 A good example on how you can leverage the `array_filter` function is given in "[PHP The Right Way][9]".
@@ -176,8 +176,10 @@ predicates (a test that return a boolean) and arrays. The most common examples a
 * `any` which returns true as soon as one element matches the predicate
 * `all` which returns true if all elements matches the predicate
 
-Those don't exists in PHP but you can find various implementations on the github gist I
-created for the occasion : https://gist.github.com/krtek4/0bb3aefd58106e254bd2
+Those don't exists in PHP but you can find various implementations on the [github gist][20] I
+created for the occasion.
+
+[20]: https://gist.github.com/krtek4/0bb3aefd58106e254bd2
 
 You can use this kind of function in rights management. For example to check if the
 connected user has at least one role with a particular set of permission or to verify that you
