@@ -2,11 +2,11 @@ As discussed in [one of my last blog posts](/archive/2014/02/03/collecting-perfo
 
 I had mainly two goals for this. Have an API compatible extension to [the official New Relic PHP extension](https://docs.newrelic.com/docs/php/the-php-api), so that we can use the same code for the Zend PHP Engine and HHVM. In our Symfony2 projects, we use the [Ekino New Relic Bundle](https://github.com/ekino/EkinoNewRelicBundle) and we didn't want to have to change that. And as a bonus, make profiling as informative as possible so that we can see which part of the call takes how long.
 
-[Writing hhvm extension](https://github.com/facebook/hhvm/wiki/Extension-API) is surprisingly easy (at least if you have a template ;)), you can even write the easy stuff in PHP (or [Hack](http://hacklang.org/)) and only for the more advanced stuff switch to C++, see [newrelic.php](https://github.com/chregu/hhvm-newrelic-ext/blob/master/newrelic.php) as an example of that.
+[Writing hhvm extension](https://github.com/facebook/hhvm/wiki/Extension-API) is surprisingly easy (at least if you have a template ;)), you can even write the easy stuff in PHP (or [Hack](http://hacklang.org/)) and only for the more advanced stuff switch to C++, see [ext_newrelic.php](https://github.com/chregu/hhvm-newrelic-ext/blob/master/ext_newrelic.php) as an example of that.
 
 New Relic is continuously adding new features to their Agent SDK and today, we're almost API complete (the only important thing missing is being able to change the license key or the appname from within HHVM).
 
-If you want to use New Relic on your HHVM server, just compile and install the extension from [github.com/chregu/hhvm-newrelic-ext/](https://github.com/chregu/hhvm-newrelic-ext/) and you're good to go. You can send attributes, errors and it will also send the time your requests needed. 
+If you want to use New Relic on your HHVM server, just compile and install the extension from [github.com/chregu/hhvm-newrelic-ext/](https://github.com/chregu/hhvm-newrelic-ext/) and you're good to go. You can send attributes, errors and it will also send the time your requests needed.
 
 ## Profiling data
 
