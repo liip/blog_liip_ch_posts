@@ -30,24 +30,22 @@ Protractor expects your tests to be written in so-called *spec files*. Spec is s
 Let's assume we want to test whether a login page displays an error message if we do not fill in the password field.
 In protractor, we'd create a spec file (`login_spec.js`) for it that might look like this:
 
-```
-describe('login page', function() {
-  it('should display an error if the password field is empty', function() {
-  
-    // Visit the login page
-    browser.get('http://mysuperawesomepage.com/login');
-    
-    // Find the element that matches ng-model="userName" and type 'gandalf' into it.
-    element(by.model('userName')).sendKeys('gandalf');
-    
-    // Find the submit button and click it
-    element(by.id('btn-submit')).click();
-    
-    // Check whether our error message is displayed
-    expect(element(by.css('.password-error')).isDisplayed()).toBe(true);
-  });
-});
-```
+    describe('login page', function() {
+      it('should display an error if the password field is empty', function() {
+      
+        // Visit the login page
+        browser.get('http://mysuperawesomepage.com/login');
+        
+        // Find the element that matches ng-model="userName" and type 'gandalf' into it.
+        element(by.model('userName')).sendKeys('gandalf');
+        
+        // Find the submit button and click it
+        element(by.id('btn-submit')).click();
+        
+        // Check whether our error message is displayed
+        expect(element(by.css('.password-error')).isDisplayed()).toBe(true);
+      });
+    });
 
 So, what have we done here?
 
@@ -100,76 +98,67 @@ If we only rely on `element` calls to structure our tests, our life gets progres
 
 We use a design pattern called *page object* to overcome this problem. It is described in more detail by [Martin Fowler](http://martinfowler.com/bliki/PageObject.html). The gist of it is very simple, we try to encapsulate and wrap most of our Protractor calls in them:
 
-
-```
-var LoginPage = function() {
-  this.username = element(by.model('username'));
-  this.password = element(by.model('password'));
-  this.loginButton = element(by.id('btn-login'));
-  this.passwordRequiredError = element(by.css('error-password-required'));
-    
-  this.visit = function() {
-    browser.get('http://mysuperawesomepage.com/login');
-  }
-    
-  this.setUsername = function(username) {
-    this.username.clear();
-    this.username.sendKeys(username);
-  }
-    
-  this.setPassword = function(password)
-    this.password.clear();
-    this.password.sendKeys(password);
-  }
-    
-  this.login = function() {
-    this.loginButton.click();
-  }
-};
-module.exports = LoginPage;
-```
+    var LoginPage = function() {
+      this.username = element(by.model('username'));
+      this.password = element(by.model('password'));
+      this.loginButton = element(by.id('btn-login'));
+      this.passwordRequiredError = element(by.css('error-password-required'));
+        
+      this.visit = function() {
+        browser.get('http://mysuperawesomepage.com/login');
+      }
+        
+      this.setUsername = function(username) {
+        this.username.clear();
+        this.username.sendKeys(username);
+      }
+        
+      this.setPassword = function(password)
+        this.password.clear();
+        this.password.sendKeys(password);
+      }
+        
+      this.login = function() {
+        this.loginButton.click();
+      }
+    };
+    module.exports = LoginPage;
 
 We can now use the LoginPage page object in our tests. You'll proably notice that the test is now much more readable, which is a nice side effect of using page objects:
- 
-```
+
 var LoginPage = require('./login-page');
 
-describe('login page', function() {
-  it('should display an error message if the password field is empty', function() {
-    var page = new LoginPage();
-    page.visit();
-    page.setUserName('gandalf');
-    page.login();
-    expect(page.passwordRequiredError.isDisplayed()).toBe(true);
-  });
-});  
-```
+    describe('login page', function() {
+      it('should display an error message if the password field is empty', function() {
+        var page = new LoginPage();
+        page.visit();
+        page.setUserName('gandalf');
+        page.login();
+        expect(page.passwordRequiredError.isDisplayed()).toBe(true);
+      });
+    });
  
 We extend this principle to shared page components, such as headers, footers and AngularJS directives and can then re-use these components:
 
-```
-var HomePage = function() {
-  this.header = new Header();
-  this.sideBar = new SideBar();
-  this.footer = new Footer();
-  ...
-};
-module.exports = HomePage;
-```
+    var HomePage = function() {
+      this.header = new Header();
+      this.sideBar = new SideBar();
+      this.footer = new Footer();
+      ...
+    };
+    module.exports = HomePage;
 
 Another neat trick: We often unify common methods in a base `Page` class that other page objects can inherit from:
 
-```
-var Page = function() {
-  this.clearAndType = function(element, text) {
-    element.clear();
-    element.sendKeys(text);
-  };
-  
-  //...
-};  
-module.exports = Page;
-```
+    var Page = function() {
+      this.clearAndType = function(element, text) {
+        element.clear();
+        element.sendKeys(text);
+      };
+      
+      //...
+    };  
+    module.exports = Page;
 
 ##Conclusion
 Protractor allows us to test our AngularJS applications in a consistent and automated way. We're better able to make informed statements about the overall state and soundness of our AngularJS applications because of it. 
