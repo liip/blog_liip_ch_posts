@@ -132,7 +132,7 @@ We can now use the LoginPage page object in our tests. You'll proably notice tha
       it('should display an error message if the password field is empty', function() {
         var page = new LoginPage();
         page.visit();
-        page.setUserName('gandalf');
+        page.setUsername('gandalf');
         page.login();
         expect(page.passwordRequiredError.isDisplayed()).toBe(true);
       });
