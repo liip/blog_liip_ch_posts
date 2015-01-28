@@ -126,7 +126,7 @@ We use a design pattern called *page object* to overcome this problem. It is des
 
 We can now use the LoginPage page object in our tests. You'll proably notice that the test is now much more readable, which is a nice side effect of using page objects:
 
-var LoginPage = require('./login-page');
+    var LoginPage = require('./login-page');
 
     describe('login page', function() {
       it('should display an error message if the password field is empty', function() {
