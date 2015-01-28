@@ -1,5 +1,3 @@
-#AngularJS - End-to-end testing with Protractor
-
 We use [AngularJS](https://angularjs.org) here at Liip, and as developers concerned with the quality of our work, we employ a multitude of tools and patterns to ensure that everything works as expected. In short, we test our software.
 
 The goal of this post is to give you a short overview about some of our experiences with testing AngularJS applications.
