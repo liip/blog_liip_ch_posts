@@ -14,12 +14,13 @@ Basically a write would then be a POST consisting of a series of operations. Now
 
 ### Reducing round trips
 
-As stated above the decision to make repositories the smallest granular unit has a lot to do with reducing network round trips. In a way if you look at the REST spec, it essentially disregards such concerns entirely. But the reality is that even with caching, it is often necessary to reduce network round trips. As such Francesco is planning
-- adding many ways to hint (or configure) Oak what additional information to return (for example it will be possible to filter child nodes that should automatically be returned by node name and node type
-- possiblity to set a limit (maybe even page through) the list of child nodes
-- possiblity to specify up to what byte size binaries should be inlined in the response
-- possiblity to filter the properties that should be returned.
-- ability to either inline binaries or send/receive them in separate requests to give full flexibility
+As stated above the decision to make repositories the smallest granular unit has a lot to do with reducing network round trips. In a way if you look at the REST spec, it essentially disregards such concerns entirely. But the reality is that even with caching, it is often necessary to reduce network round trips. As such Francesco is planninig:
+
+* adding many ways to hint (or configure) Oak what additional information to return (for example it will be possible to filter child nodes that should automatically be returned by node name and node type
+* possiblity to set a limit (maybe even page through) the list of child nodes
+* possiblity to specify up to what byte size binaries should be inlined in the response
+* possiblity to filter the properties that should be returned.
+* ability to either inline binaries or send/receive them in separate requests to give full flexibility
 
 These are all very important for PHPCR and go above the features that are available to use in the current Jackrabbit HTTP API.
 
