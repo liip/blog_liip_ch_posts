@@ -36,9 +36,10 @@ Here are some examples of features that you might need (or not) and help you in 
 As always, chosing a technology is not a straighforward decision. There are always tradeofs. But for what I have seen PostgreSQL FTE features can bring you already quite far and could avoid you having to deal with Solr (or other systems) in many cases.
 
 We haven't talk about technical matter in this blog post, there are already quite good technical blog posts on the topic and I think it is useless to repeat here what has already been said. I have used these ones to guide me during the hackday. If you want to go into more technical details I can recommend you having a look at those: 
+
    - a good technical [blogpost](http://blog.lostpropertyhq.com/postgres-full-text-search-is-good-enough/) about postgres FTS 
    - [another one](http://dlo.me/archives/2014/09/01/postgresql-fts/) but with a focus on usage from Django application
    - [postgresql documentation](http://www.postgresql.org/docs/current/static/textsearch.html) about the full text search feature
   
-I hope this might help you next time you have to add fulltext search capabilities to the system you are working on.
+I hope this might help you next time you have to add fulltext search capabilities to the system you are building.
 
