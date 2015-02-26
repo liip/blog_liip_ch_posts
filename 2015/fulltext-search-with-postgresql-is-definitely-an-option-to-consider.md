@@ -1,5 +1,6 @@
 PostgreSQL is an excellent open source RDBMS. It has established itself as one of the most reliable database system available in the open source world. Over the years it even grew new features that very few competing systems offer: GIS fonctionalities, Foreign data wrapper, NoSql features with the recent integration of JSON datatype and V8 engine and Full Text Search (FTS) capabilities. In this blog post we will investigate on the FTS features it offers.
 
+
 Full Text Search has been a hot topics for the last 10 years. It grew out of the need for wider search capabilities that were not provided by regular SQL database. Therefores systems like Lucene, Solr and ElasticSeach came to life and filled that need. The main requirements for a FTS system could be summarized as following:
   - being able to search on many fields at the same time (blog post title, body, tags)
   - being able to sort matching results according to their relevance
